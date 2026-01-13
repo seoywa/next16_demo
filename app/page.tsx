@@ -27,7 +27,9 @@ const Home = async () => {
 
         <ul className="events">
           {events && events.length > 0 && events.map((event: IEvent) => (
-              <EventCard {...event} key={event.slug}/>
+              <li key={event.title} className="list-none">
+                <EventCard {...event} />
+              </li>
           ))}
         </ul>
       </div>
